@@ -27,7 +27,17 @@ class Song
   end
   
   def self.find_or_create_by_name
-    
+    #will accept a string name for a song and either return a matching song instance with that name or create a new song with the name and return the song instance.
   end
+  
+  def self.alphabetical
+    #
+  end
+  
+  
+  
+  
+  
+  
   
 end
