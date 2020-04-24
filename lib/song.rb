@@ -15,10 +15,12 @@ class Song
   end
   
   def self.new_by_name
-    
+    # takes in the string name of a song and returns a song instance with that name set as its name property
   end
   
-  
+  def self.create_by_name
+    
+  end
   
   
 end
