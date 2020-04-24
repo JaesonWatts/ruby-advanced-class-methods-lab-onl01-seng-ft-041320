@@ -26,6 +26,8 @@ class Song
     #accepts the string name of a song and returns the matching instance of the song with that name.
   end
   
-  
+  def self.find_or_create_by_name
+    
+  end
   
 end
