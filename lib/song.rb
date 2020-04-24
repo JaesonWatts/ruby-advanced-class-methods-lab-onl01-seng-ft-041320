@@ -41,10 +41,10 @@ class Song
   end
   
   def self.create_from_filename
-    
+    #accepts a filename in the format of " - .mp3", for example "Taylor Swift - Blank Space.mp3". The Song.create_from_filename class method should not only parse the filename correctly but should also save the Song instance that was created.
   end
   
-  
+  def self.destroy_all
   
   
   
