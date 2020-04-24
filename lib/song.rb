@@ -36,6 +36,7 @@ class Song
   end
   
   def self.new_from_filename
+    # accepts a filename in the format of " - .mp3", for example, "Taylor Swift - Blank Space.mp3"
     
   end
   
