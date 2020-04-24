@@ -31,7 +31,8 @@ class Song
   end
   
   def self.alphabetical
-    #
+    #returns all the songs in ascending (a-z) alphabetical order.
+    #Use Array#sort_by.
   end
   
   
