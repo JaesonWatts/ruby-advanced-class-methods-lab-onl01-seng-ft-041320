@@ -23,7 +23,7 @@ class Song
   end
   
   def self.find_by_name
-  
+    #accepts the string name of a song and returns the matching instance of the song with that name.
   end
   
   
