@@ -35,6 +35,9 @@ class Song
     #Use Array#sort_by.
   end
   
+  def self.new_from_filename
+    
+  end
   
   
   
