@@ -11,7 +11,7 @@ class Song
   end
 
   def self.create
-    #initializes a song and saves it to the @@all variable
+    self.class.all << self
   end
   
   def self.new_by_name
