@@ -15,14 +15,14 @@ class Song
     song
   end
   
-  def self.new_by_name
+  def self.new_by_name(name)
     # takes in the string name of a song and returns a song instance with that name set as its name property
     song = self.new
     song.name = name
     song
   end
   
-  def self.create_by_name
+  def self.create_by_name(name)
     # takes in the string name of a song and returns a song instance with that name set as its name property and the song being saved into the @@all class variable.
     song = self.new
     song.name = name
@@ -30,12 +30,12 @@ class Song
     song
   end
   
-  def self.find_by_name
+  def self.find_by_name(name)
     #accepts the string name of a song and returns the matching instance of the song with that name.
     @@all.find{|it| it.name == name}
   end
   
-  def self.find_or_create_by_name
+  def self.find_or_create_by_name(name)
     #will accept a string name for a song and either return a matching song instance with that name or create a new song with the name and return the song instance.
     self.find_by_name(name) || self.create_by_name(name)
   end
@@ -46,7 +46,7 @@ class Song
      @@all.sort_by{|it| it.name}
   end
   
-  def self.new_from_filename
+  def self.new_from_filename(name)
     # accepts a filename in the format of " - .mp3", for example, "Taylor Swift - Blank Space.mp3"
     #Given Song.new_from_filename("Taylor Swift - Blank Space.mp3"), the constructor should return a new Song instance with the song name set to Blank Space and the artist_name set to Taylor Swift
     song = self.new 
@@ -55,7 +55,7 @@ class Song
     song
   end
   
-  def self.create_from_filename
+  def self.create_from_filename(name)
     #accepts a filename in the format of " - .mp3", for example "Taylor Swift - Blank Space.mp3". The Song.create_from_filename class method should not only parse the filename correctly but should also save the Song instance that was created.
   song = self.new
     song.name = (name.split(" - ")[1].chomp(".mp3"))
