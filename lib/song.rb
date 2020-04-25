@@ -11,23 +11,33 @@ class Song
   end
 
   def self.create
-    self.class.all << self
+    song = self.new
+    song
   end
   
   def self.new_by_name
     # takes in the string name of a song and returns a song instance with that name set as its name property
+    song = self.new
+    song.name = name
+    song
   end
   
   def self.create_by_name
     # takes in the string name of a song and returns a song instance with that name set as its name property and the song being saved into the @@all class variable.
+    song = self.new
+    song.name = name
+    @@all << song
+    song
   end
   
   def self.find_by_name
     #accepts the string name of a song and returns the matching instance of the song with that name.
+    @@all.find{|it| it.name == name}
   end
   
   def self.find_or_create_by_name
     #will accept a string name for a song and either return a matching song instance with that name or create a new song with the name and return the song instance.
+    
   end
   
   def self.alphabetical
