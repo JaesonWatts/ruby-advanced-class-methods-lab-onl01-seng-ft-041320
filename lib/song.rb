@@ -43,6 +43,7 @@ class Song
   def self.alphabetical
     #returns all the songs in ascending (a-z) alphabetical order.
     #Use Array#sort_by.
+     @@all.sort_by{|x| x.name}
   end
   
   def self.new_from_filename
